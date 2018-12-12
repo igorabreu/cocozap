@@ -1,2 +1,14 @@
 .Header {
+  .socialMediaWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    @media (min-width: 900px) {
+      margin-right: 100px;
+      display: inline;
+      width: 180px;
+      float: right;
+    }
+  }
 }

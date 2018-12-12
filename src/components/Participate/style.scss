@@ -1,0 +1,19 @@
+@import '../_settings/variables';
+
+.Participate {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+  .participate-wrapper {
+    width: 80vw;
+    padding: 50px 50px;
+    background: #e2ffc7;
+    border-radius: 5px;
+    .participate-text {
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import '../_settings/fonts.scss';
+@import '../_settings/variables';
+
+.SectionTitle {
+  h2 {
+    font-size: 1.6rem;
+    font-family: 'Gotham Narrow Ultra';
+    letter-spacing: 0.05em;
+    color: $darkBrown;
+    text-transform: uppercase;
+  }
+}
