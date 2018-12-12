@@ -1,0 +1,26 @@
+@import '../_settings/variables';
+
+.MenuBar {
+  background: $darkBrown;
+  color: $white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  .menuWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 500px;
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.SocialMediaBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  @media (min-width: 900px) {
+    margin-right: 100px;
+    display: inline;
+    width: 180px;
+    float: right;
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    right: 10px;
+    width: 160px;
+    height: 30px;
+    img {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+  }
+}
