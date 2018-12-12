@@ -27,7 +27,9 @@
       .text-info {
         display: flex;
         flex-direction: column;
-        margin-left: 30px;
+        @media (min-width: 900px) {
+          margin-left: 30px;
+        }
         .category,
         .location,
         .frequency,
