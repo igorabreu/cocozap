@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 import Header from './Header'
 import MenuBar from './MenuBar'
 import MapComponent from './MapComponent'
@@ -11,24 +10,50 @@ import CallToAction from './CallToAction'
 import SocialMediaBar from './SocialMediaBar'
 import './layout.scss'
 
-const Layout = ({ children }) => (
-  <div>
-    <Header />
-    <MenuBar />
-    <MapComponent />
-    <MapInfo />
-    <Participate />
-    <AccessData />
-    <About />
-    <CallToAction />
-    <div className="socialMediaBottom">
-      <SocialMediaBar />
-    </div>
-  </div>
-)
+class Layout extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      mapInfo: {
+        date: 20181019,
+        picture: '20181019_1115_966175624',
+        description: 'Problemas de alagamentos sempre que chove',
+        category: 'Alagamento',
+        frequency: 'Ocasionalmente',
+        address: 'Rua Santa Rita,',
+        location: 'Nova Holanda',
+        lat: -22.853554,
+        long: -43.244659,
+        triedToSolve: 'nao menciona',
+        externalHelp: 'nao se aplica',
+      },
+    }
+  }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  handleMapInfo(info) {
+    this.setState({
+      mapInfo: info,
+    })
+  }
+
+  render() {
+    const { mapInfo } = this.state
+    return (
+      <div>
+        <Header />
+        <MenuBar />
+        <MapComponent setInfoMap={info => this.handleMapInfo(info)} />
+        <MapInfo {...mapInfo} />
+        <Participate />
+        <AccessData />
+        <About />
+        <CallToAction />
+        <div className="socialMediaBottom">
+          <SocialMediaBar />
+        </div>
+      </div>
+    )
+  }
 }
 
 export default Layout

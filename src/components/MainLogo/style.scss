@@ -9,16 +9,20 @@
   align-items: center;
   height: 300px;
   .logo {
-    max-width: 200px;
+    max-width: 235px;
   }
   .subtitle {
     margin-top: 20px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     letter-spacing: 0.05em;
     color: $veryDarkGreen;
     text-transform: uppercase;
-    max-width: 500px;
+    max-width: 300px;
     font-family: 'Gotham Narrow Ultra';
     text-align: center;
+    @media (min-width: 900px) {
+      font-size: 1.3rem;
+      max-width: 500px;
+    }
   }
 }

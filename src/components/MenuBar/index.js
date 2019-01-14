@@ -1,23 +1,28 @@
 import React from 'react'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import './style.scss'
 
 const MenuBar = () => (
   <div className="MenuBar">
     <ul className="menuWrapper">
       <li className="dataLabe">
-        <a>Um projeto DataLabe </a>
+        <a href="http://datalabe.org/" target="_blank">
+          Um projeto DataLabe{' '}
+        </a>
       </li>
       <li className="about">
-        <a>Sobre</a>
+        <AnchorLink href="#about">Sobre</AnchorLink>
       </li>
       <li className="data">
-        <a>Acesse os dados</a>
+        <AnchorLink href="#accessData">Acesse os dados</AnchorLink>
       </li>
       <li className="participate">
-        <a>Participe</a>
+        <AnchorLink href="#participate">Participe</AnchorLink>
       </li>
       <li className="method">
-        <a>Método</a>
+        <a href="https://medium.com/cocozap" target="_blank">
+          Método
+        </a>
       </li>
     </ul>
   </div>
